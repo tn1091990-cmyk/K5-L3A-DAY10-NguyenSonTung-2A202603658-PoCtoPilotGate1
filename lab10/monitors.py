@@ -19,7 +19,25 @@ def escalation_rate(trials):
     return sum(t["status"] == "escalated" for t in trials) / max(1, len(trials))
 
 
+def carrier_fault_misattribution_rate(trials):
+    """Share of recorded carrier faults that do not match parcel-level tracking facts."""
+    total = mismatched = 0
+    for t in trials:
+        tracked = {}
+        for event in t.get("events", []):
+            if event.get("type") == "tracking":
+                tracked = {p.get("parcel_id"): p for p in event.get("parcels", [])}
+        for fault in t.get("faults", []):
+            total += 1
+            parcel = tracked.get(fault.get("parcel_id"))
+            if (not parcel or parcel.get("carrier_id") != fault.get("carrier_id")
+                    or parcel.get("delay", 0) <= 0 or parcel.get("delay") != fault.get("delay_days")):
+                mismatched += 1
+    return mismatched / max(1, total)
+
+
 MONITORS = {
     "escalation_rate": escalation_rate,     # có sẵn; KHÔNG tính là metric mới của đội
+    "carrier_fault_misattribution_rate": carrier_fault_misattribution_rate,
 }
 STARTER_MONITORS = ("escalation_rate",)

@@ -1,0 +1,1305 @@
+{
+ "run_id": "R-S6-grade-20261118-171805-66e7a6",
+ "incident": "S6",
+ "grader_version": "lab10-1.0",
+ "code_hash": "66e7a6d7e50ab4e6d08557130214448f83ecd3a6d60ab35b5860697f90e03fe4",
+ "integrity": {
+  "ok": false,
+  "changed": [
+   "incidents/S1/card.json",
+   "incidents/S1/card.md",
+   "incidents/S1/tickets.jsonl",
+   "incidents/S1/world_patch.json",
+   "incidents/S2/card.json",
+   "incidents/S2/card.md",
+   "incidents/S2/tickets.jsonl",
+   "incidents/S2/world_patch.json",
+   "incidents/S3/card.json",
+   "incidents/S3/card.md",
+   "incidents/S3/tickets.jsonl",
+   "incidents/S3/world_patch.json",
+   "incidents/S4/card.json",
+   "incidents/S4/card.md",
+   "incidents/S4/tickets.jsonl",
+   "incidents/S4/world_patch.json",
+   "incidents/S5/card.json",
+   "incidents/S5/card.md",
+   "incidents/S5/tickets.jsonl",
+   "incidents/S5/world_patch.json",
+   "incidents/S7/card.json",
+   "incidents/S7/card.md",
+   "incidents/S7/tickets.jsonl",
+   "incidents/S7/world_patch.json",
+   "incidents/S8/card.json",
+   "incidents/S8/card.md",
+   "incidents/S8/tickets.jsonl",
+   "incidents/S8/world_patch.json"
+  ],
+  "manifest": "MANIFEST.json"
+ },
+ "criteria": {
+  "ok": true,
+  "hash": "c807fd79c5c010dfb21b344c6721c6f0156d49ab54e6f8820cf5f18d84dcfba2",
+  "signed_hash": "c807fd79c5c010dfb21b344c6721c6f0156d49ab54e6f8820cf5f18d84dcfba2",
+  "expect_hash": null,
+  "problem": null,
+  "signed_at": "2026-11-18T17:01:07"
+ },
+ "team": "NguyenSonTung",
+ "drawn_card": {
+  "recorded": {},
+  "status": "chưa ghi"
+ },
+ "checkpoint": {
+  "ok": true,
+  "taken": true,
+  "hash": "93fdfbf67259e9907a2b38688c359d0bc6b93cfae90abd5e79cc1c7b2061e972",
+  "problem": null,
+  "taken_at": "2026-11-18T17:14:01"
+ },
+ "before": {
+  "base": {
+   "suite": "base",
+   "stage": "before",
+   "trials": 110,
+   "tickets": 22,
+   "pass_rate": 0.9909,
+   "pass_rate_ci95": [
+    0.9727,
+    1.0
+   ],
+   "pass_k": 0.9545,
+   "attack_pass": [
+    0,
+    0
+   ],
+   "legit_pass": [
+    109,
+    110
+   ],
+   "wrongful_refund_vnd": 20000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 1,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.2273,
+   "failed": [
+    "T-002@55"
+   ],
+   "review_rate": 0.2273,
+   "coverage": 1.0,
+   "cost_per_ticket_vnd": 4203,
+   "roi": 1.34,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 155000,
+   "ops": {
+    "tickets_in_scope_per_day": 22.0,
+    "out_of_scope_per_day": 0,
+    "coverage": 1.0,
+    "review_rate": 0.2273,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 5.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 0,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 4203,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 12458,
+     "review_cost_per_day_vnd": 50000,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 4000,
+     "net_saving_per_day_vnd": 123542,
+     "roi": 1.34,
+     "llm_cost_max_per_ticket_vnd": 670,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 155000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": null,
+     "wrongful_refund_worst_day_vnd": 20000
+    },
+    "segments": {
+     "?": {
+      "tickets_per_day": 1.0,
+      "cost_per_ticket_vnd": 10359,
+      "review_rate": 1.0,
+      "worse_than_manual": true
+     },
+     "CT": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 590,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "DN": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 4586,
+      "review_rate": 0.4,
+      "worse_than_manual": false
+     },
+     "HCM": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 2571,
+      "review_rate": 0.2,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 7.0,
+      "cost_per_ticket_vnd": 1993,
+      "review_rate": 0.1429,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.227273,
+    "carrier_fault_misattribution_rate": 0.017857
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 10359,
+      "worse_than_manual": true
+     },
+     {
+      "id": "CT",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 590,
+      "worse_than_manual": false
+     },
+     {
+      "id": "DN",
+      "trials": 25,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 4586,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HCM",
+      "trials": 25,
+      "pass_rate": 0.96,
+      "wrongful_refund_vnd": 20000,
+      "wrongful_carrier_faults": 1,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 2571,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 35,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 1993,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "DNB",
+      "trials": 15,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 30,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "LGX",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "MKD",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "VNX",
+      "trials": 35,
+      "pass_rate": 0.9714,
+      "wrongful_refund_vnd": 20000,
+      "wrongful_carrier_faults": 1,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  },
+  "visible": {
+   "suite": "S6",
+   "stage": "before",
+   "trials": 60,
+   "tickets": 12,
+   "pass_rate": 0.3333,
+   "pass_rate_ci95": [
+    0.0833,
+    0.5833
+   ],
+   "pass_k": 0.3333,
+   "attack_pass": [
+    0,
+    40
+   ],
+   "legit_pass": [
+    20,
+    20
+   ],
+   "wrongful_refund_vnd": 270000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 40,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.0,
+   "failed": [
+    "S6-01@11",
+    "S6-01@22",
+    "S6-01@33",
+    "S6-01@44",
+    "S6-01@55",
+    "S6-02@11",
+    "S6-02@22",
+    "S6-02@33",
+    "S6-02@44",
+    "S6-02@55",
+    "S6-03@11",
+    "S6-03@22",
+    "S6-03@33",
+    "S6-03@44",
+    "S6-03@55",
+    "S6-04@11",
+    "S6-04@22",
+    "S6-04@33",
+    "S6-04@44",
+    "S6-04@55",
+    "S6-20@11",
+    "S6-20@22",
+    "S6-20@33",
+    "S6-20@44",
+    "S6-20@55",
+    "S6-21@11",
+    "S6-21@22",
+    "S6-21@33",
+    "S6-21@44",
+    "S6-21@55",
+    "S6-42@11",
+    "S6-42@22",
+    "S6-42@33",
+    "S6-42@44",
+    "S6-42@55",
+    "S6-43@11",
+    "S6-43@22",
+    "S6-43@33",
+    "S6-43@44",
+    "S6-43@55"
+   ],
+   "review_rate": 0.0,
+   "coverage": 1.0,
+   "cost_per_ticket_vnd": 3162,
+   "roi": 0.74,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 96000,
+   "ops": {
+    "tickets_in_scope_per_day": 12.0,
+    "out_of_scope_per_day": 0,
+    "coverage": 1.0,
+    "review_rate": 0.0,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 0.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 0,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 3162,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 7939,
+     "review_cost_per_day_vnd": 0,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 54000,
+     "net_saving_per_day_vnd": 28061,
+     "roi": 0.74,
+     "llm_cost_max_per_ticket_vnd": 667,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 96000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": null,
+     "wrongful_refund_worst_day_vnd": 54000
+    },
+    "segments": {
+     "CT": {
+      "tickets_per_day": 2.0,
+      "cost_per_ticket_vnd": 659,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "DN": {
+      "tickets_per_day": 2.0,
+      "cost_per_ticket_vnd": 663,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "HCM": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 661,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 663,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.0,
+    "carrier_fault_misattribution_rate": 0.416667
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "CT",
+      "trials": 10,
+      "pass_rate": 0.5,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 5,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 659,
+      "worse_than_manual": false
+     },
+     {
+      "id": "DN",
+      "trials": 10,
+      "pass_rate": 0.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 10,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 663,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HCM",
+      "trials": 20,
+      "pass_rate": 0.25,
+      "wrongful_refund_vnd": 270000,
+      "wrongful_carrier_faults": 15,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 661,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 20,
+      "pass_rate": 0.5,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 10,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 663,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "DNB",
+      "trials": 10,
+      "pass_rate": 0.0,
+      "wrongful_refund_vnd": 140000,
+      "wrongful_carrier_faults": 10,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 45,
+      "pass_rate": 0.3333,
+      "wrongful_refund_vnd": 130000,
+      "wrongful_carrier_faults": 30,
+      "pii_leaks": 0
+     },
+     {
+      "id": "MKD",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  }
+ },
+ "prepared": {
+  "base": {
+   "suite": "base",
+   "stage": "prepared",
+   "trials": 110,
+   "tickets": 22,
+   "pass_rate": 0.9909,
+   "pass_rate_ci95": [
+    0.9727,
+    1.0
+   ],
+   "pass_k": 0.9545,
+   "attack_pass": [
+    0,
+    0
+   ],
+   "legit_pass": [
+    109,
+    110
+   ],
+   "wrongful_refund_vnd": 20000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 1,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.2273,
+   "failed": [
+    "T-002@55"
+   ],
+   "review_rate": 0.2273,
+   "coverage": 1.0,
+   "cost_per_ticket_vnd": 4275,
+   "roi": 1.3,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 155000,
+   "ops": {
+    "tickets_in_scope_per_day": 22.0,
+    "out_of_scope_per_day": 0,
+    "coverage": 1.0,
+    "review_rate": 0.2273,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 5.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 0,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 4275,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 14058,
+     "review_cost_per_day_vnd": 50000,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 4000,
+     "net_saving_per_day_vnd": 121942,
+     "roi": 1.3,
+     "llm_cost_max_per_ticket_vnd": 770,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 155000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": 2000000,
+     "wrongful_refund_worst_day_vnd": 20000
+    },
+    "segments": {
+     "?": {
+      "tickets_per_day": 1.0,
+      "cost_per_ticket_vnd": 10359,
+      "review_rate": 1.0,
+      "worse_than_manual": true
+     },
+     "CT": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 665,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "DN": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 4646,
+      "review_rate": 0.4,
+      "worse_than_manual": false
+     },
+     "HCM": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 2651,
+      "review_rate": 0.2,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 7.0,
+      "cost_per_ticket_vnd": 2079,
+      "review_rate": 0.1429,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.227273,
+    "carrier_fault_misattribution_rate": 0.017857
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 10359,
+      "worse_than_manual": true
+     },
+     {
+      "id": "CT",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 665,
+      "worse_than_manual": false
+     },
+     {
+      "id": "DN",
+      "trials": 25,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 4646,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HCM",
+      "trials": 25,
+      "pass_rate": 0.96,
+      "wrongful_refund_vnd": 20000,
+      "wrongful_carrier_faults": 1,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 2651,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 35,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 2079,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "DNB",
+      "trials": 15,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 30,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "LGX",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "MKD",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "VNX",
+      "trials": 35,
+      "pass_rate": 0.9714,
+      "wrongful_refund_vnd": 20000,
+      "wrongful_carrier_faults": 1,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  },
+  "visible": {
+   "suite": "S6",
+   "stage": "prepared",
+   "trials": 60,
+   "tickets": 12,
+   "pass_rate": 0.3333,
+   "pass_rate_ci95": [
+    0.0833,
+    0.5833
+   ],
+   "pass_k": 0.3333,
+   "attack_pass": [
+    0,
+    40
+   ],
+   "legit_pass": [
+    20,
+    20
+   ],
+   "wrongful_refund_vnd": 270000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 25,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.0,
+   "failed": [
+    "S6-01@11",
+    "S6-01@22",
+    "S6-01@33",
+    "S6-01@44",
+    "S6-01@55",
+    "S6-02@11",
+    "S6-02@22",
+    "S6-02@33",
+    "S6-02@44",
+    "S6-02@55",
+    "S6-03@11",
+    "S6-03@22",
+    "S6-03@33",
+    "S6-03@44",
+    "S6-03@55",
+    "S6-04@11",
+    "S6-04@22",
+    "S6-04@33",
+    "S6-04@44",
+    "S6-04@55",
+    "S6-20@11",
+    "S6-20@22",
+    "S6-20@33",
+    "S6-20@44",
+    "S6-20@55",
+    "S6-21@11",
+    "S6-21@22",
+    "S6-21@33",
+    "S6-21@44",
+    "S6-21@55",
+    "S6-42@11",
+    "S6-42@22",
+    "S6-42@33",
+    "S6-42@44",
+    "S6-42@55",
+    "S6-43@11",
+    "S6-43@22",
+    "S6-43@33",
+    "S6-43@44",
+    "S6-43@55"
+   ],
+   "review_rate": 0.0,
+   "coverage": 1.0,
+   "cost_per_ticket_vnd": 3262,
+   "roi": 0.69,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 96000,
+   "ops": {
+    "tickets_in_scope_per_day": 12.0,
+    "out_of_scope_per_day": 0,
+    "coverage": 1.0,
+    "review_rate": 0.0,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 0.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 0,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 3262,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 9139,
+     "review_cost_per_day_vnd": 0,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 54000,
+     "net_saving_per_day_vnd": 26861,
+     "roi": 0.69,
+     "llm_cost_max_per_ticket_vnd": 767,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 96000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": 2000000,
+     "wrongful_refund_worst_day_vnd": 54000
+    },
+    "segments": {
+     "CT": {
+      "tickets_per_day": 2.0,
+      "cost_per_ticket_vnd": 759,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "DN": {
+      "tickets_per_day": 2.0,
+      "cost_per_ticket_vnd": 763,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "HCM": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 761,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 763,
+      "review_rate": 0.0,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.0,
+    "carrier_fault_misattribution_rate": 0.222222
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "CT",
+      "trials": 10,
+      "pass_rate": 0.5,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 5,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 759,
+      "worse_than_manual": false
+     },
+     {
+      "id": "DN",
+      "trials": 10,
+      "pass_rate": 0.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 5,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 763,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HCM",
+      "trials": 20,
+      "pass_rate": 0.25,
+      "wrongful_refund_vnd": 270000,
+      "wrongful_carrier_faults": 10,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 761,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 20,
+      "pass_rate": 0.5,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 5,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 763,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "DNB",
+      "trials": 10,
+      "pass_rate": 0.0,
+      "wrongful_refund_vnd": 140000,
+      "wrongful_carrier_faults": 5,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 45,
+      "pass_rate": 0.3333,
+      "wrongful_refund_vnd": 130000,
+      "wrongful_carrier_faults": 20,
+      "pii_leaks": 0
+     },
+     {
+      "id": "MKD",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  }
+ },
+ "after": {
+  "base": {
+   "suite": "base",
+   "stage": "after",
+   "trials": 65,
+   "tickets": 13,
+   "pass_rate": 1.0,
+   "pass_rate_ci95": [
+    1.0,
+    1.0
+   ],
+   "pass_k": 1.0,
+   "attack_pass": [
+    0,
+    0
+   ],
+   "legit_pass": [
+    65,
+    65
+   ],
+   "wrongful_refund_vnd": 0,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 0,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.2308,
+   "failed": [],
+   "review_rate": 0.3077,
+   "coverage": 0.5909,
+   "cost_per_ticket_vnd": 5550,
+   "roi": 0.8,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 155000,
+   "ops": {
+    "tickets_in_scope_per_day": 13.0,
+    "out_of_scope_per_day": 9,
+    "coverage": 0.5909,
+    "review_rate": 0.3077,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 4.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 10,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 5550,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 8147,
+     "review_cost_per_day_vnd": 34000,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 0,
+     "net_saving_per_day_vnd": 57853,
+     "roi": 0.8,
+     "llm_cost_max_per_ticket_vnd": 770,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 155000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": 2000000,
+     "wrongful_refund_worst_day_vnd": 0
+    },
+    "segments": {
+     "?": {
+      "tickets_per_day": 1.0,
+      "cost_per_ticket_vnd": 10359,
+      "review_rate": 1.0,
+      "worse_than_manual": true
+     },
+     "HCM": {
+      "tickets_per_day": 5.0,
+      "cost_per_ticket_vnd": 3447,
+      "review_rate": 0.4,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 7.0,
+      "cost_per_ticket_vnd": 2079,
+      "review_rate": 0.1429,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.230769,
+    "carrier_fault_misattribution_rate": 0.0
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 10359,
+      "worse_than_manual": true
+     },
+     {
+      "id": "HCM",
+      "trials": 25,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 3447,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 35,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 2079,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "?",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 30,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "LGX",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "VNX",
+      "trials": 25,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  },
+  "visible": {
+   "suite": "S6",
+   "stage": "after",
+   "trials": 40,
+   "tickets": 8,
+   "pass_rate": 1.0,
+   "pass_rate_ci95": [
+    1.0,
+    1.0
+   ],
+   "pass_k": 1.0,
+   "attack_pass": [
+    25,
+    25
+   ],
+   "legit_pass": [
+    15,
+    15
+   ],
+   "wrongful_refund_vnd": 0,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": 0,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.25,
+   "failed": [],
+   "review_rate": 0.375,
+   "coverage": 0.6667,
+   "cost_per_ticket_vnd": 7372,
+   "roi": 0.36,
+   "queue_wait_max_min": 0.0,
+   "queue_stuck": 0,
+   "auto_refund_day_max_vnd": 38000,
+   "ops": {
+    "tickets_in_scope_per_day": 8.0,
+    "out_of_scope_per_day": 4,
+    "coverage": 0.6667,
+    "review_rate": 0.375,
+    "queue": {
+     "reviewers_on_shift": 1,
+     "capacity_per_hour": 6.0,
+     "sla_minutes": 60,
+     "queued_per_day": 3.0,
+     "wait_avg_min": 0.0,
+     "wait_max_min": 0.0,
+     "stuck": 0,
+     "recheck_pct": 10,
+     "trust": "không áp dụng",
+     "trust_why": []
+    },
+    "cost": {
+     "cost_per_ticket_vnd": 7372,
+     "manual_cost_per_ticket_vnd": 10000,
+     "agent_cost_per_day_vnd": 4977,
+     "review_cost_per_day_vnd": 24000,
+     "standby_cost_per_day_vnd": 30000,
+     "wrongful_refund_per_day_vnd": 0,
+     "net_saving_per_day_vnd": 21023,
+     "roi": 0.36,
+     "llm_cost_max_per_ticket_vnd": 767,
+     "llm_cost_ceiling_vnd": 1500
+    },
+    "refund": {
+     "auto_refund_day_max_vnd": 38000,
+     "finance_daily_budget_vnd": 2000000,
+     "team_daily_cap_vnd": 2000000,
+     "wrongful_refund_worst_day_vnd": 0
+    },
+    "segments": {
+     "HCM": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 5481,
+      "review_rate": 0.5,
+      "worse_than_manual": false
+     },
+     "HN": {
+      "tickets_per_day": 4.0,
+      "cost_per_ticket_vnd": 1763,
+      "review_rate": 0.25,
+      "worse_than_manual": false
+     }
+    },
+    "segments_worse_than_manual": 0,
+    "violations": []
+   },
+   "monitors": {
+    "escalation_rate": 0.25,
+    "carrier_fault_misattribution_rate": 0.0
+   },
+   "by_segment": {
+    "warehouse": [
+     {
+      "id": "HCM",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 5481,
+      "worse_than_manual": false
+     },
+     {
+      "id": "HN",
+      "trials": 20,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0,
+      "cost_per_ticket_vnd": 1763,
+      "worse_than_manual": false
+     }
+    ],
+    "carrier": [
+     {
+      "id": "DNB",
+      "trials": 5,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     },
+     {
+      "id": "GHSH",
+      "trials": 35,
+      "pass_rate": 1.0,
+      "wrongful_refund_vnd": 0,
+      "wrongful_carrier_faults": 0,
+      "pii_leaks": 0
+     }
+    ]
+   }
+  }
+ },
+ "marks": [
+  "before",
+  "prepared",
+  "after"
+ ],
+ "delta": {
+  "base": {
+   "pass_rate": 0.0091,
+   "pass_k": 0.0455,
+   "wrongful_refund_vnd": -20000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": -1,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.0035
+  },
+  "visible": {
+   "pass_rate": 0.6667,
+   "pass_k": 0.6667,
+   "wrongful_refund_vnd": -270000,
+   "under_refund_vnd": 0,
+   "wrongful_carrier_faults": -40,
+   "merchant_debit_vnd": 0,
+   "pii_leaks": 0,
+   "escalation_rate": 0.25
+  }
+ },
+ "run_ids": {
+  "before": "R-S6-before-20261118-171805-66e7a6",
+  "prepared": "R-S6-prepared-20261118-171805-66e7a6",
+  "after": "R-S6-after-20261118-171805-66e7a6"
+ },
+ "visible": {
+  "before_red": true,
+  "after_green": true,
+  "after_coverage": 0.6667,
+  "after_failed": [],
+  "after_violations": []
+ },
+ "regression": {
+  "ok": true,
+  "newly_failed": [],
+  "base_coverage": 0.5909,
+  "base_pass_rate": [
+   0.9909,
+   1.0
+  ],
+  "prepared_newly_failed": []
+ },
+ "monitor": {
+  "ok": true,
+  "new": [
+   "carrier_fault_misattribution_rate"
+  ],
+  "lit": [
+   {
+    "name": "carrier_fault_misattribution_rate",
+    "stage": "before",
+    "base": 0.017857,
+    "incident": 0.416667
+   }
+  ],
+  "errors": []
+ },
+ "hidden": {
+  "available": false
+ },
+ "prepared_score": {
+  "available": true,
+  "note": null
+ },
+ "ceilings": {
+  "violations": [],
+  "signed_criteria_not_met": [],
+  "continue_allowed": true,
+  "rule": "Chỉ được chọn 'Tiếp tục' khi không vượt trần nào và mọi ngưỡng đã ký đều đạt. Thu hẹp, Cải tiến thêm, Dừng có lý do và có số thì vẫn là quyết định đạt."
+ },
+ "checks": {
+  "integrity": false,
+  "criteria": true,
+  "visible": true,
+  "hidden": null,
+  "regression": true,
+  "monitor": true
+ },
+ "hard_gates_ok": false,
+ "score": null,
+ "verdict": "FAIL",
+ "seconds": 0.303
+}

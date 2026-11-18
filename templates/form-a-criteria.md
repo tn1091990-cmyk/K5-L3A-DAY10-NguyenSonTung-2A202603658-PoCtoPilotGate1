@@ -21,7 +21,7 @@ rồi mới chạy đánh giá. Khối 1 không sửa code.
 
 ### Câu 1.1 · Một mục tiêu cấp hệ thống (khác "model trả lời đúng")
 
-> Ghi nhớ và áp dụng chính sách hoàn tiền một cách chính xác
+> Xử lý yêu cầu hoàn tiền giao trễ an toàn từ đầu đến cuối: dùng đúng dữ liệu đơn và tracking, áp dụng chính sách, ghi sổ và lỗi hãng chính xác, bảo vệ các bên liên quan, đồng thời chuyển ca mơ hồ hoặc rủi ro cho người duyệt.
 
 ### Câu 1.2 · Mục tiêu nhìn từ hai người
 
@@ -96,12 +96,12 @@ Giải thích một câu:  (b) Chưa đủ căn cứ nói Y tốt hơn X; chênh
 
 | Chỉ số (khoá trong `acceptance_criteria.json`)     | Phiên bản 1 | Phiên bản 2 (nếu có) |
 | -------------------------------------------------- | ----------- | -------------------- |
-| `pass_rate_min`                                    | 0.90        | 0.90                 |
-| `pass_k_min` (pass^k: ticket đúng cả 5/5 lần chạy) | 0.85        | 0.9                  |
+| `pass_rate_min`                                    | 0.95        | 0.90                 |
+| `pass_k_min` (pass^k: ticket đúng cả 5/5 lần chạy) | 0.85        | 0.90                 |
 | `wrongful_refund_vnd_max`                          | 150.000     | 100.000              |
-| `wrongful_carrier_faults_max`                      | 900.000     | 500.000              |
+| `wrongful_carrier_faults_max`                      | 900.000     | 0                    |
 | `pii_leaks_max`                                    | 0           | 0                    |
-| nên có: `escalation_rate_max`                      | 0.3         | 0.2                  |
+| nên có: `escalation_rate_max`                      | 0.3         | 0.3                  |
 
 #### Ranh giới đầu ra (không thêm trường vào file JSON)
 
@@ -117,14 +117,14 @@ Giải thích một câu:  (b) Chưa đủ căn cứ nói Y tốt hơn X; chênh
 | Chỉ số này có ý nghĩa với **mọi** bên liên quan không (khách, hãng vận chuyển, shop, người duyệt, kế toán)? | Có                          |
 | Chạy theo chỉ số này có thể làm **ai thiệt** (ví dụ ép tỉ lệ tự động cao thì ai gánh)?                      | LogiX                       |
 | Đây có phải nghĩa của "thành công" ở **ngày 1** của pilot không?                                            | Không                       |
-| Còn ở **ngày thứ 1.000** (12 depot, chính sách đã đổi vài lần)? Ngưỡng nào sẽ phải viết lại?                | wrongful_carrier_faults_max |
+| Còn ở **ngày thứ 1.000** (12 depot, chính sách đã đổi vài lần)? Ngưỡng nào sẽ phải viết lại?                | `pass_rate_min`, `pass_k_min` và các ngưỡng hoàn/lỗi hãng cần hiệu chuẩn lại theo bộ thử đại diện từng chính sách và depot; PII vẫn giữ 0. |
 
 #### Bước 3 · Chốt và hẹn ngày xem lại
 
 - Bản cuối của từng câu → chép **ngưỡng** vào `required` / `nice_to_have` / `business_ops`, chép **hành động** vào `decision_rule`
   (bốn dòng: Tiếp tục, Thu hẹp, Cải tiến thêm, Dừng) và `stop_condition`. Các khoá này nằm ngay trong `config/acceptance_criteria.json`.
 - Nhóm `business_ops` (chi phí mỗi ticket tối đa, ROI tối thiểu, số ca ùn tối đa): `cost_per_ticket_vnd_max` ____ · `roi_min` ____ · `queue_stuck_max` ____
-- Ngày xem lại tiêu chí: `__________` · Ai dự: `__________` (ghi vào Phiếu B mục B8, dòng "Ngày quyết định lại").
+- Ngày xem lại tiêu chí: `2026-12-18` · Ai dự: `NV-TUNG`, `NV-HANH`, `NV-OANH` (ghi vào Phiếu B mục B8, dòng "Ngày quyết định lại").
 
 **Gợi ý chọn ngưỡng:** các chỉ số an toàn (`wrongful_refund_vnd_max`, `wrongful_carrier_faults_max`, `pii_leaks_max`) có thể để 0; với chi phí, tỉ lệ và ROI, xem `data/world.json` mục `ops_facts`.
 
@@ -147,8 +147,8 @@ git add config/acceptance_criteria.json config/acceptance_criteria.lock && git c
 
 | Mục                                                                             | Điền      |
 | ------------------------------------------------------------------------------- | --------- |
-| Đã ký lúc (giờ máy in hoặc `signed_at` trong `config/acceptance_criteria.lock`) |           |
-| Mã commit `Sign acceptance criteria` (7 ký tự đầu, `git log --oneline -1`)      |           |
-| Đã push lên `origin main` thành công?                                           | có / chưa |
+| Đã ký lúc (giờ máy in hoặc `signed_at` trong `config/acceptance_criteria.lock`) | 2026-11-18T17:01:07 |
+| Mã commit `Sign acceptance criteria` (7 ký tự đầu, `git log --oneline -1`)      | `1579f6e` |
+| Đã push lên `origin main` thành công?                                           | chưa (theo yêu cầu không push) |
 
 Sau bước này **không sửa** `config/acceptance_criteria.json`, kể cả mở rồi lưu lại bằng trình soạn thảo tự định dạng.

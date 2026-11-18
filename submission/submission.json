@@ -1,12 +1,12 @@
 {
-  "team": "",
-  "members": [],
-  "incident": "",
-  "decision_v1": "",
-  "decision_v2": "",
+  "team": "NguyenSonTung",
+  "members": ["NguyenSonTung-2A202603658"],
+  "incident": "S6",
+  "decision_v1": "Tiếp tục",
+  "decision_v2": "Cải tiến thêm",
   "three_lines": {
-    "environment_assumption": "",
-    "reduce_or_prevent": "",
-    "measure_in_pilot": ""
+    "environment_assumption": "Tracking phân tách chính xác từng kiện, ghi đúng hãng và nguyên nhân, và các kiện trong một đơn có thể được quy về cùng một bên chịu trách nhiệm.",
+    "reduce_or_prevent": "Cổng chặn việc ghi lỗi khi kiện hoặc hãng không khớp tracking và chuyển đơn nhiều kiện trễ sang người; nó ngăn nhánh này nếu dữ liệu nguồn đúng, nhưng không phát hiện tracking sai.",
+    "measure_in_pilot": "Đối chiếu lỗi hãng theo kiện với biên bản giao nhận thật, ghi nhận ca mơ hồ, khoản hoàn và phản hồi từ hãng ở HN/HCM trước khi mở rộng."
   }
 }
